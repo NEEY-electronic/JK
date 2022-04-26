@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>极空BMS</title>
+    <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:url" content="https://www.pgyer.com">
+    <meta property="og:title" content="蒲公英">
+    <meta property="og:description" content="极空BMS 4.6.5(45)">
+    <meta name="apple-mobile-web-app-title" content="蒲公英">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui">
+
+<link rel="dns-prefetch" href="//www.pgyer.com">
+<link rel="dns-prefetch" href="//www.pgyer.com">
+<link rel="dns-prefetch" href="//www.pgyer.com">
+<link rel="dns-prefetch" href="//assets.pgyer.com">
+<link rel="shortcut icon" href="https://assets.pgyer.com/static-20220521/assets/img/favicon.ico" />
+
+    <link rel="stylesheet" href="https://assets.pgyer.com/static-20220521/assets/build/header_include.min.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-52814215-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-52814215-1', {
+    'link_attribution': true,
+    'custom_map': {
+        'dimension1': 'register_and_unregister_users',
+        'dimension2': 'app_page_with_ad',
+        'dimension3': 'is_app_page'
+    },
+    'linker': {
+        'domains': ['open.pgyer.com', 'www.pgyer.com']
+    }
+});
+// google ads 
+gtag('config', 'AW-871638792');
+
+</script>
+            <link rel="stylesheet" href="https://assets.pgyer.com/static-20220521/assets/build/appView.min.css">
+                <link rel="stylesheet" href="https://assets.pgyer.com/static-20220521/assets/build/viewColorful.min.css">
+        <link href="https://assets.pgyer.com/static-20220521/assets/css/appRecommendService.css" rel="stylesheet" type="text/css" />
+
+        <!-- <meta http-equiv="Content-Security-Policy" content="frame-src https://qzonestyle.gtimg.cn webcompt:"> -->
+</head>
+
+<body>
+    
+<!-- wechat share icon -->
+<div style="display:none;" id="wechatShareImg">
+    <img src="https://cdn-app-icon.pgyer.com/a/0/9/1/9/a091977beb0f8297c298ac692cfad5e3?x-oss-process=image/resize,m_lfit,h_300,w_300/format,jpg" onerror="javascript:this.src='https://assets.pgyer.com/static-20220521/assets/img/default-icon.png';" />
+</div>
+
+
+<!-- ad start -->
+    <style>
+.wechat {
+        display:none;
+    height:auto;
+}
+
+/*如果没有背景图则放大100%*/
+.wechat img {
+    width: 100%;
+}
+
+.wechat-small img {
+    width: 100%;
+}
+
+.wechat-small {
+        display:block;
+}
+.wechat-img {
+    /*padding: 0 50px;*/
+    max-height:70px;
+}
+
+.wechat-img-small {
+    margin:auto;
+    padding:0;
+    max-height:70px;
+}
+
+@media (min-width: 820px){
+    .wechat-img {
+        margin:auto;
+    }
+    .wechat {
+        display:block;
+    }
+    .wechat-small {
+        display:none;
+    }
+    .wechat-img-small {
+        margin:auto;
+        padding:0;
+    }
+    .mb-number {
+        display: none;
+    }
+}
+.pc-number {
+    position: absolute;
+    right: 19.5%;
+    bottom: 2px;
+    color: #fefafa;
+    font-size: 2vw;
+    font-weight: 200;
+    font-family: 'PingFang SC';
+    line-height: 1;
+}
+.mb-number {
+    position: absolute;
+    right: 11%;
+    bottom: 3px;
+    color: #fefafa;
+    font-size: 30px;
+    font-weight: 200;
+    font-family: 'PingFang SC';
+    line-height: 1;
+}
+@media (max-width: 820px){
+    .pc-number {
+        display: none;
+    }
+}
+@media (min-width: 550px) and (max-width: 970px) {
+    .mb-number {
+        right: 11%;
+        font-size: 45px;
+    }
+}
+
+.ad-container {
+    position: relative;
+}
+</style>
+<div class='ad-container'>
+<div class="wechat text-center">
+    <a href="https://www.pgyer.com/ad/view/285" target="_blank"> <img src="https://assets.pgyer.com/image/view/admin_ads/035c7433c29f91224db7aee8a2ff25c9" class="img-responsive wechat-img" /> </a>
+</div>
+<div class="wechat-small text-center">
+   <a href="https://www.pgyer.com/ad/view/285" target="_blank"> <img src="https://assets.pgyer.com/image/view/admin_ads/3e62fc7409e5fb8722cef83a69a9a45e" class="img-responsive wechat-img wechat-img-small" /> </a>
+</div>
+<a style="position:absolute;color:#fff;right:10px;top:0" href="javascript:void(0);" onclick="$('.wechat').slideUp(1000);$('.wechat-small').slideUp(500);$('#main-content').css('margin-top', 0)">
+    <i class="fa fa-close" style="opacity: 0.6;"></i> 
+</a>
+</div>
+
+<script>
+    gtag('event', 'app_admin_ad_top', {'app_admin_ad_top': 1});
+        gtag('event', 'app_view_admin_ad_top', {'app_view_admin_ad_top': 1});
+    </script>
+
+
+<!-- ad end -->
+        <div class="row-fluid " style="z-index:-2;">
+        <div id="header"></div>
+    </div>
+            <!--=== Content Part ===-->
+        <div class="container content pt-10">
+            <div class="view row">
+                                    <div class="span12 margin-bottom-30 " id="appicon-bg">
+                            <div id="iconBox">
+        <img src="https://cdn-app-icon.pgyer.com/a/0/9/1/9/a091977beb0f8297c298ac692cfad5e3?x-oss-process=image/resize,m_lfit,h_120,w_120/format,jpg" class="appicon" onerror="javascript:this.src='https://assets.pgyer.com/static-20220521/assets/img/default-icon.png'" />
+        <img src="https://assets.pgyer.com/static-20220521/images/publish_success/enterprise@2x.png" class="hide" id="enterpriseBadge"/>
+    </div>                    </div>
+                                <div class="span12 app-title" style="text-align:center;padding-top:10px;">
+                    <h2 style="color:#333;size:24px;margin-bottom: -5px;">
+                                                    <i class="fa fa-android app-type-icon" aria-hidden="true"></i>
+                                                极空BMS                                                                    </h2>
+                </div>
+
+                <div class="span12 gray-text app-info mt-10" style="text-align:center;">
+                    <ul class="breadcrumb " >
+                                                    <li>
+                                版本：4.6.5                                (build 45)
+                            </li>
+                            <li>大小：48.9 MB</li>
+                        
+                                                <li class="">
+                            更新时间 ：2022-04-20                        </li>
+                    </ul>
+                                    </div>
+
+            </div>
+
+                            <div id="" class="view row col-md-6 col-md-offset-3 margin-bottom-30" style="padding-top:26px;">
+                    <div class="col-md-12">
+                        <div class="span12 gray-text" style="text-align:center;">
+                            <img src="https://www.pgyer.com/app/qrcode/Cfq3" class="qrcode " />
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="margin-top:20px;">
+                                                <div class="row mb-10 install-btn" $style="">
+                                        <div class="span12 margin-bottom-20" style="text-align:center;margin-bottom:20px;">
+            <div class="spinner">
+                <div id="showtextTitle" class="hide" style="padding-bottom:10px;">正在安装...</div>
+                <div id="showtext">下载时请勿离开页面（如未自动安装，请手动安装）</div>
+                <div class="loading"></div>
+
+                                        <a href="javascript:void(0);" onclick="javascript:install_loading();" id="down_load" class="btn-u btn-u-lg  ">
+                            <img src="https://assets.pgyer.com/static-20220521/images/dl.png" class="hide">
+                             安装                        </a>
+                            </div>
+        </div>
+    
+                            </div>
+                                                                                    <div class="span12 gray-text hide" style="text-align:center;">
+                                    <p style="padding-top:10px;color:#969b9d;">或者用手机扫描二维码安装</p>
+                                </div>
+                                                                        </div>
+
+                                                                
+                        <div class="col-md-12" style="text-align:center;margin-top: 10px;">
+        <div class="spinner" style=" ">
+                        <a href="https://www.pgyer.com/about/disclaimer" target="_blank" style="color:#FFAE00">该应用来源于第三方产品, 请甄别风险后进行安装</a>
+        </div>
+    </div>
+            <div class="col-md-12">
+            <div class="check-install-tip">
+                <span class="pull-left"> 无法安装/安装应用? </span>
+                                <a class="pull-right"  data-toggle="modal" data-target="#appCheckModal">立即检测 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="modal fade" id="appCheckModal" tabindex="-1" role="dialog" aria-labelledby="appCheckModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="appCheckModalLabel">提示</h4>
+                </div>
+                <div class="modal-body text-center">
+                                        <img class="qrcode" src="https://www.pgyer.com/app/qrcodeUrl/https%3A%2F%2Fwww.pgyer.com%2Fapp%2FinstallCheck%3Fkey%3DCfq3" alt="">
+                    <p> 建议使用需要安装应用的设备，扫描上方二维码进行检测 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+                </div>
+                        <div id="endInstall"></div>
+            
+            <!-- Start install -->
+            <div class="view row hide" style="margin-top:30px;">
+
+                <!--                <div class="span12 margin-bottom-20" style="text-align:center;display:none;">
+                    <div class="spinner">
+                        <div id="showtext">下载时请勿离开页面（如未自动安装，请手动安装）</div>
+                        <div class="loading"></div>
+                        <a href="javascript:void(0);" onclick="javascript:install_loading();" id="down_load"
+                           class="btn-u btn-u-lg btn-u-green"><i
+                                    class="fa fa-download"></i> 安装</a>
+                    </div>
+                </div>
+            -->
+
+            </div>
+            <!-- End install -->
+            
+            <!-- ====== Start appStore ==== -->
+                        <!-- ====== End appStore ==== -->
+
+            
+            <!-- 历史版本 -->
+                            <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <hr class="devider devider-dotted" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2" style="word-break:break-all;">
+                        <div class="tag-box ">
+                            <h2 class="content-title">历史版本</h2>
+                            <table class="table table-striped table-hover app_view_history" style="table-layout: fixed;">
+                                <tbody>
+                                    <input type="hidden" id="pageNum" value="1">
+                                                                                                                <tr appkey="f5a1a564e9164ff7a1ff436f993a582e" class="history_row">
+                                                                                        <td style="position: relative" class="history-item">
+                                                                                                4.6.4                                                (build 44)
+                                            </td>
+                                            <td class="text-left " style="min-width:100px;">
+                                                                                            </td>
+                                            <td  nowrap="nowrap" class="text-right pr-50" >
+                                                2022-04-08                                                                                            </td>
+                                        </tr>
+                                                                            <tr appkey="f06e5dc196217d48614eb22e1aeeb049" class="history_row">
+                                                                                        <td style="position: relative" class="history-item">
+                                                                                                4.6.1                                                (build 43)
+                                            </td>
+                                            <td class="text-left " style="min-width:100px;">
+                                                                                            </td>
+                                            <td  nowrap="nowrap" class="text-right pr-50" >
+                                                2022-03-31                                                                                            </td>
+                                        </tr>
+                                                                            <tr appkey="92375536f26f3b2e23a2999bffc37f9f" class="history_row">
+                                                                                        <td style="position: relative" class="history-item">
+                                                                                                4.5.1                                                (build 42)
+                                            </td>
+                                            <td class="text-left " style="min-width:100px;">
+                                                                                            </td>
+                                            <td  nowrap="nowrap" class="text-right pr-50" >
+                                                2022-03-11                                                                                            </td>
+                                        </tr>
+                                                                            <tr appkey="5cf1585a7bb80e63631d10a6792b77d2" class="history_row">
+                                                                                        <td style="position: relative" class="history-item">
+                                                                                                4.3.2                                                (build 41)
+                                            </td>
+                                            <td class="text-left " style="min-width:100px;">
+                                                                                            </td>
+                                            <td  nowrap="nowrap" class="text-right pr-50" >
+                                                2022-02-18                                                                                            </td>
+                                        </tr>
+                                                                            <tr appkey="11be92eb5a451611edc0c0b54852d5fd" class="history_row">
+                                                                                        <td style="position: relative" class="history-item">
+                                                                                                4.3.1                                                (build 40)
+                                            </td>
+                                            <td class="text-left " style="min-width:100px;">
+                                                                                            </td>
+                                            <td  nowrap="nowrap" class="text-right pr-50" >
+                                                2022-02-16                                                                                            </td>
+                                        </tr>
+                                    
+                                                                            <tr class="history_show_more" id="ajaxMore">
+                                            <td class="text-center warning" colspan="3"><i class="fa fa-angle-double-down" aria-hidden="true"></i> 查看更多</td>
+                                        </tr>
+                                                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                        <!-- 历史版本 -->
+
+                            <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <hr class="devider devider-dotted" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2" style="word-break:break-all;">
+                        <div class="tag-box ">
+                            <h2 class="content-title">应用介绍</h2>
+                            <div id="description" style="height: 130px;overflow: hidden;">
+                                “极空BMS”是成都极空科技有限公司推出的智能电池管理系统(BMS)的配套手机APP，极空科技的智能电池管理系统包括锂电池均衡器、锂电池保护板。                            </div>
+                            <a id="descriptionLoad" href="#" style=" float:right;margin-top: 10px">展开</a>
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- 应用截图 -->
+                                        <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <hr class="devider devider-dotted" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="tag-box  margin-bottom-40">
+                            <h2 class="content-title">应用截图</h2>
+                            <div class="table-responsive" style="border:none; overflow:auto;">
+                                <table class="table" style="margin-bottom:0;">
+                                    <tr>
+                                            <td class="text-center" width="20%" style="border:none;">
+                            <div style="">
+                <img src="https://cdn-app-screenshot.pgyer.com/1/c/d/1/0/1cd106cceec02a4e7bb2209e21750b74?x-oss-process=image/resize,m_lfit,h_528,w_528/format,jpg" style="width:230px;" />
+            </div>
+            </td>
+    <td class="text-center" width="20%" style="border:none;">
+                            <div style="">
+                <img src="https://cdn-app-screenshot.pgyer.com/e/c/b/f/e/ecbfe9f0885c69198205837acd6a312a?x-oss-process=image/resize,m_lfit,h_528,w_528/format,jpg" style="width:230px;" />
+            </div>
+            </td>
+    <td class="text-center" width="20%" style="border:none;">
+                            <div style="">
+                <img src="https://cdn-app-screenshot.pgyer.com/8/1/e/8/2/81e822d6fe37ba80ca82bc04d26f2cad?x-oss-process=image/resize,m_lfit,h_528,w_528/format,jpg" style="width:230px;" />
+            </div>
+            </td>
+    <td class="text-center" width="20%" style="border:none;">
+                            <div style="">
+                <img src="https://cdn-app-screenshot.pgyer.com/f/0/0/5/4/f0054fee1423dec133483f1df21f81e4?x-oss-process=image/resize,m_lfit,h_528,w_528/format,jpg" style="width:230px;" />
+            </div>
+            </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <!-- 应用截图 -->
+
+            <div class="row ">
+                <div class="col-md-8 col-md-offset-2">
+                        <hr class="devider">
+            </div>
+        </div>
+        <a class="btn btn-default btn-feedback hide" data-toggle="modal" data-modal='feedbackAppModal' id="feedbackClickIcon"><img src="https://assets.pgyer.com/static-20220521/assets/img/feedback_icon_normal.png" class="img-responsive hide"> </a>
+        <div class="row feedback-box">
+                                <div class="col-md-8 col-md-offset-2">
+                                        <div class="tag-box  margin-bottom-40">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                <h2 class="content-title">使用反馈</h2>
+                                <div class="row" style="border:none;border:none;display: flex;justify-content: center;align-items: flex-end;">
+                                    <div class="col-md-10 col-xs-12">
+                                        <p style="color: #969b9d;margin-bottom:0px">向该应用的开发者提交您在使用过程中遇到的问题或对应用的建议，帮助他们做的更好。</p>
+                                    </div>
+                                    <div class="col-md-2 hidden-xs">
+                                        <a class="btn btn-default btn-feedback" data-toggle="modal" data-modal='feedbackAppModal' id="feedbackClick" style="">反馈</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 visible-xs" style="margin-top:15px">
+                                <a class="btn btn-default btn-feedback" data-toggle="modal" data-modal='feedbackAppModal' id="feedbackClick" style="">反馈</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>            <!-- preferList -->
+            <div class="row" id="campaignList" style="display:none">
+                <div class="col-md-8 col-md-offset-2">
+                    <hr class="devider">
+                    <div class="app-list">
+                                                <h2 class="content-title">安装过该应用的用户还喜欢</h2>
+                        <div class="prefer-scroll ">
+                            <span class="scroll-icon scroll-left"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <span class="scroll-icon scroll-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <div id="preferListHorizon" class="scroll-box horizon-scroll">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- preferList -->
+            <!--/container-->
+            <!--=== End Content Part ===-->
+        </div>
+    
+    <div style="padding-left:15px;padding-right:15px;">
+        
+
+    </div>
+
+    <!--=== Copyright ===-->
+<link rel="stylesheet" href="https://assets.pgyer.com/static-20220521/assets/plugins/sky-forms/version-2.0.1/css/custom-sky-forms.css">
+<link href="https://assets.pgyer.com/static-20220521/fineuploader/fineuploader.css" rel="stylesheet" type="text/css" />
+<link href="https://assets.pgyer.com/static-20220521/assets/css/appArticle.css" rel="stylesheet" type="text/css" />
+<!-- footer -->
+<div class="copyright container-fluid"  style="display:none">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="row">
+            <div class="col-lg-6  col-xs-6 col-md-6 col-sm-6 text-left">
+                                <!-- <a data-toggle="modal" data-modal='reportAppModal' id="reportClick" style="cursor: pointer;">举报</a> -->
+                <a class="reportAppLink" href="https://www.pgyer.com/report/app" target="_blank">举报</a>
+                <a href="https://www.pgyer.com/about/disclaimer" target="_blank" class="hide">免责声明</a>
+                <span style="font-size:12px;" class="hidden-xs hide">提示：该应用来源于第三方产品，内容不受蒲公英控制，请您仔细甄别，审慎安装。蒲公英仅为信息服务平台，与第三方应用之间不存在任何关联关系，不提供任何担保或承诺。蒲公英不为因此产生的任何投资、购买行为承担任何责任。</span>
+            </div>
+                            <div class="col-lg-6  col-xs-6 col-md-6 col-sm-6 text-right">
+                    <a href="https://www.pgyer.com/lang/select?l=cn&redi=https%3A%2F%2Fwww.pgyer.com%2FCfq3"><img src="https://assets.pgyer.com/static-20220521/assets/img/language_chinese.png"> 中文</a>
+                    &nbsp;&nbsp;&nbsp;<a href="https://www.pgyer.com/lang/select?l=en&redi=https%3A%2F%2Fwww.pgyer.com%2FCfq3"><img src="https://assets.pgyer.com/static-20220521/assets/img/language_english.png"> English</a>
+                </div>
+                        <div class="col-xs-12 copyright-tips">
+                <span style="font-size:12px;margin-bottom:5px;">提示：该应用来源于第三方产品，内容不受蒲公英控制，请您仔细甄别，审慎安装。蒲公英仅为信息服务平台，与第三方应用之间不存在任何关联关系，不提供任何担保或承诺。蒲公英不为因此产生的任何投资、购买行为承担任何责任。</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="reportAppModal"></div>
+<div id="feedbackAppModal"></div>
+<div id="freeModal"></div>
+<div id="loginTelModalDiv"></div>
+
+<div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">用户安装须知</h4>
+            </div>
+            <div class="modal-body">
+                <ol>
+<li>蒲公英内测服务平台为第三方应用提供应用测试托管、应用崩溃检测等服务。应用内容均来源于第三方产品，蒲公英仅为用户提供内测支持，不涉及任何人工编辑和整理，也不参与任何应用的内容开发和对外运营，不对任何来源于第三方的内容（包括但不限于安装包安全、信息描述、应用截图）承担责任，您可根据描述场景谨慎选择进行内测试用。</li>
+<li>我们对该等程序仅可进行初步的形式审查，无法详细分析每一应用程序的运行后果及风险。请您审慎地甄别应用程序的质量，切勿因为垃圾短信、邮件、文字说明等内容随意安装来源不可靠的应用程序，请根据应用安装链接的来源自行判断并安装可信任的应用程序。对于通过蒲公英发布的应用程序或蒲公英上展示的其他站点的链接，蒲公英不对该程序或站点的规则、政策或具体内容负责。</li>
+<li>在您通过蒲公英安装或使用应用程序的过程中，蒲公英不会要求您提供任何个人信息，但我们无法控制亦无法保证应用程序开发者不会要求您提供个人信息。无论依据国家法律、法规的规定，应用程序开发者收集、使用您的个人信息应当遵循合法、正当、必要的原则，公开收集规则，向您明示收集、使用信息的目的、方式和范围，并且必须经过您的同意。应用程序开发者不得收集与其提供服务无关的个人信息，不得违反法律、法规规定或与您之间的约定收集、使用您的个人信息。如您在通过蒲公英安装或使用应用程序的过程中被要求提供个人信息，请您审慎考虑并自行决定是否提供。</li>
+<li>任何公司、产品或者个人认为蒲公英涉嫌侵犯您的版权或应用权，您应该及时向我们提供举报声明、书面权利通知，并提供身份证明、权属证明及侵权情况等投诉材料。我们将依法进行处理。</li>
+<li>蒲公英的服务是按照现有技术和条件所能达到的现状提供的。蒲公英会尽最大努力向您提供服务，确保服务的连贯性和安全性；但蒲公英不能保证其所提供的服务毫无瑕疵，也无法随时预见和防范法律、技术以及其他风险，包括但不限于不可抗力、病毒、木马、黑客攻击、系统不稳定、第三方服务瑕疵、政府行为等原因可能导致的服务中断、数据丢失以及其他的损失和风险。即使蒲公英提供的服务存在瑕疵，但上述瑕疵是当时行业技术水平所无法避免的，其将不被视为蒲公英违约，同时，由此给您造成的数据或信息丢失等损失的，您同意放弃追究蒲公英的责任。</li>
+<li>蒲公英平台所接触的内容和信息来源广泛，我方无法对该内容和信息的准确性、真实性、可用性、安全性、完整性和正当性负责。蒲公英不对用户在我方平台上传、发布或传输的任何内容和信息背书、推荐或表达观点，也不对任何内容和信息的错误、瑕疵及产生的损失或损害承担任何责任，您对内容和信息的任何使用需自行承担相关的风险。我方平台在法律有明确规定的情况下承担相应的责任。</li>
+</ol>                <div class="accept">
+                    <p>点击同意按钮即表示同意《 蒲公英用户安装须知》</p>
+                    <div>
+                        <button type="button" class="btn btn-primary btn-negative btn-primary" data-dismiss="modal">不同意</button>
+                        <button type="button" class="btn btn-primary btn-accept btn-primary" data-dismiss="modal" onclick="acceptDisclaimer()">同意并继续</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- 高速下载通道弹窗 -->
+<div class="modal fade addmodel selectDownload in" id="highSpeedDownload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog campaign-dialog" style=" margin-top: 0px; margin-left:0; margin-right:0; position: fixed; bottom: 0; margin-left: 0; margin-right: 0; margin-bottom: 0px;width:100%;">
+        <div class="modal-content" style="border:none; border-top-left-radius:20px; border-top-right-radius:20px;border-bottom-left-radius:0px; border-bottom-right-radius:0px;z-index:1050;">
+            <div class="modal-header" style="border:none;padding:10px 14px;min-height:0px;">
+                <button type="button" class="close hide" data-dismiss="modal" aria-hidden="true" style="margin-top:1px;">×</button>
+                <span class="cam-ad-page-title" style="font-size:20px;"></span>
+            </div>
+            <div class="modal-body" style="background:#fff;height:auto;max-height:460px;padding:4px 0px;border-radius: 4px;padding-bottom:20px;">
+                <div class="useGoApp" id="useHighSpeed" style="margin-bottom:20px;">
+                    <a href="javascript:void(0);" onclick="javascript:gotoPay();" class="btn-u btn-u-lg btn-download-goapp">
+                        <img src="https://assets.pgyer.com/static-20220521/images/speed_download_icon@3x.png" class="speed-icon"style="width:12px;margin-left:5px;">
+                        安装包较大建议 ¥0 开启高速安装                        <p style="margin: 0;font-size: 10px;color: #fff;">安全快速省流量，一次启用有效期为 30 天</p>
+                    </a>
+                    <a href="javascript:void(0);" onclick="javascript:$('#highSpeedDownload').modal('hide');install_loading();" id="selectDownloadBtn" class="normal-download btn-u btn-u-lg  " style="border:none;background:none !important;">
+                        普通安装                    </a>
+                </div>
+                <div class="pay-high-speed text-center hide" id="pay-high-speed" style="height:280px;">
+                                        <img src="https://assets.pgyer.com/static-20220521/images/pgyerExpeditetool.png" class="appgo-icon" style="width:80px;">
+                        <p style="padding-top:20px;">
+                            <strong>通过官方加速器提升速度和安全性</strong>                        </p>
+                        <p style="padding-bottom:10px;">
+                            如果您已经安装「蒲公英加速器」，请直接手动打开                        </p>
+                    <div id="showtextAppGo" class="hide">下载时请勿离开页面（如未自动安装，请手动安装）</div>
+                    <div class="loadingAppGo" class="hide"></div>
+                    <a href="javascript:void(0);" onclick="javascript:install_appgo();" id="down_load_appgo"  class="btn-u btn-u-lg  " >
+                         安装                    </a>
+                    <a href="javascript:void(0);" onclick="javascript:open_appgo();" id="open_appgo"  class="btn-u btn-u-lg hide  " > 打开加速器 </a>
+                </div>
+            </div>
+            <div class="modal-footer" style="margin-top:0px;border:none;text-align:center;padding:0;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end -->
+
+    
+    <div id="appInstallConfirmModal">
+        <div>
+            <img src="https://assets.pgyer.com/static-20220521/images/app_install_confirm_pic1.png">
+            <p>该应用涉及金融属性，请您审慎安装。</p>
+            <img src="https://assets.pgyer.com/static-20220521/images/app_install_confirm_pic2.png" onclick="$('#appInstallConfirmModal').css('top', '-100px');">
+        </div>
+    </div>
+
+    
+    <!-- 推广应用弹窗 -->
+<div class="modal fade addmodel in" id="campaignAd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;z-index:1090">
+<div class="modal-dialog campaign-dialog" style=" margin-top: 0px; margin-left:0; margin-right:0; position: fixed; bottom: 0; margin-left: 0; margin-right: 0; margin-bottom: 0;width:100%;">
+<div class="modal-content" style="border:none;border-radius:0;">
+<div class="modal-header" style="border:none;padding:10px 14px;min-height:0px;">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top:1px;">×</button>
+<div style="display: inline-block;width:100%; line-height: 100%; margin: 10px;text-align: center;color: #1abc9c;font-size: 14px;" id="showTextModel">下载时请勿离开页面（如未自动安装，请手动安装）</div>
+<span class="cam-ad-page-title" style="font-size:20px;">猜你喜欢</span>
+</div>
+<div class="modal-body" style="background:#fff;height:auto;max-height:460px;padding:4px 0px;border-radius: 4px;padding-bottom:150px;">
+    <div id="campaignAdContent" style="">
+    </div>
+</div>
+<div class="modal-footer" style="margin-top:0px;border:none;text-align:center;padding:0;">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end -->
+    <!-- 推广应用弹窗 -->
+<div class="modal fade addmodel in" id="turnTable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;z-index:1090">
+<div class="modal-dialog campaign-dialog" style=" margin-top: 0px; margin-left:0; margin-right:0; position: fixed; bottom: 0; margin-left: 0; margin-right: 0; margin-bottom: 0;width:100%;height:100%;position:absolute;overflow-y:auto;">
+<div class="modal-content" style="border:none;border-radius:0;">
+<div class="modal-header hide" style="border:none;padding:10px 14px;min-height:0px;">
+<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top:1px;">×</button> -->
+<!-- <div style="display: inline-block;width:100%; line-height: 100%; margin: 10px;text-align: center;color: #1abc9c;font-size: 14px;" id="showTextModel">下载时请勿离开页面（如未自动安装，请手动安装）</div> -->
+</div>
+<div class="modal-body" style="background:#fff;height:auto;height:100%;padding:4px 0px;border-radius: 4px;padding-bottom:150px;">
+    <div id="turnTableContent" style="">
+    </div>
+</div>
+<div class="modal-footer" style="margin-top:0px;border:none;text-align:center;padding:0;">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end -->
+    <!-- 关注弹窗 -->
+<div class="modal fade addmodel in" id="cityJobAd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;z-index:1090">
+    <div class="modal-dialog" style=" margin-top:120px;" >
+        <img src="https://assets.pgyer.com/static-20220521/images/cicy-job-ad-banner@2x.png" style="width:100%;/> 
+        <div class="modal-content" style="border-radius:16px;" >
+            <div class="modal-header" style="display:none;" >
+            </div>
+            <div class="modal-body follow-body">
+                <section class="section" id="jobAdContent" >
+                    <li class="job-ad-item">
+                        <span class="pull-left job-title">Java 开发工程师</span>
+                        <span class="pull-right job-salary">10K-18K</span>
+                    </li>
+                    <li class="job-ad-item">
+                        <span class="pull-left job-title">大数据 BI 工程师</span>
+                        <span class="pull-right job-salary">20K-38K</span>
+                    </li>
+                    <li class="job-ad-item">
+                        <span class="pull-left job-title">软件项目经理</span>
+                        <span class="pull-right job-salary">12K-20K</span>
+                    </li>
+                </section>
+                <section id="button" class="section text-center mt-10" style="z-index:0;margin-bottom:0;">
+                    <a href="https://job.pgyer.com//index" target="_blank" class="btn-u job-view" style="cursor: pointer;" onClick="addGoogleGtag('app-view-job-ad-click');$('#cityJobAd').modal('hide');">查看详情</a>
+                </section>
+            </div>
+        </div>
+        <div class="modal-footer text-center" style="border-top:none;">
+            <img src="https://assets.pgyer.com/static-20220521/images/close-modal@2x.png" data-dismiss="modal" aria-hidden="true" style="width:32px;" />
+        </div>
+    </div>
+</div>
+<!-- end --><!-- 关注弹窗 -->
+<div class="modal fade addmodel in" id="riskModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;z-index:1090">
+    <div class="modal-dialog" style=" margin-top:120px;" >
+        <div class="modal-content" style="border-radius:16px;" >
+            <div class="modal-header" style="border:none;" >
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top:1px;font-size:26px;position: fixed;right: 20px;">×</button>
+                <div class="follow-title mt-20" style="font-size:18px;margin-bottom:0;">温馨提示</div>
+            </div>
+            <div class="modal-body follow-body" style="background:#fff;height:auto;padding:0 30px 10px 30px;border-radius:16px;">
+                <section class="section" >
+                    <div class="row">
+                        <div class="col-md-12" style="font-size:14px;color:#2D2E45;text-align: justify;font-family:PingFang SC,Microsoft YaHei;">
+                            您正在从我方平台安装 “极空BMS” 应用，您要安装的该款 App 来源于第三方开发者上传的产品，并非我方平台开发，其内容不受我平台控制，请您仔细甄别，审慎安装。我方平台仅提供 App托管服务，与您要安装的该款 App 之间不存在任何关联关系，不提供任何担保或承诺。                        </div>
+                    </div>
+                </section>
+                                
+                <section id="button" class="section text-center" style="z-index:0;margin-bottom:0;margin-top:40px;">
+                    <button type="button" class="btn-u submit-btn risk-download" onClick="$('#riskModel').modal('hide');install_loading();">继续安装</button>
+                </section>
+
+                <section id="button" class="section text-center mt-10" style="z-index:0;margin-bottom:0;">
+                    <a href="#" class="risk-report" onClick="$('#riskModel').modal('hide');$('#reportClick').click()" style="cursor: pointer;">举报该应用</a>
+                </section>
+            </div>
+        </div>
+        <div class="modal-footer" style="border-top:none;margin:0;padding:0px 10px 20px;">
+        </div>
+    </div>
+</div>
+<!-- end -->    <!--=== End Copyright ===-->
+    <!-- JS Global Compulsory -->
+    <script type="text/javascript">
+    var userKey = "";
+    const maxImageCount = '5';
+    var isMergeAppStore = false;
+    var feedbackImageCounter = 0;
+    const imageCountOutTips = "反馈截图最多不能超过5张";
+</script>
+    <script type="text/javascript" src="https://assets.pgyer.com/static-20220521/assets/build/app_view.min.js"></script>
+<script type="text/javascript" src="https://assets.pgyer.com/static-20220521/assets/js/plugins/ua-parser.min.js"></script>
+<script>
+// baidu tongji
+var _hmt = _hmt || [];
+_hmt.push(['_setUserTag', '5820', 'developers']);
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8748fc8d44d4c96b145053b62e3788fe";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <script src="https://assets.pgyer.com/static-20220521/fineuploader/jquery.fine-uploader.min.js"></script>
+    <script type="text/javascript" src="https://assets.pgyer.com/static-20220521/assets/js/resetPageStyle.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!--[if lt IE 9]>
+<script src="https://assets.pgyer.com/static-20220521/assets/plugins/respond.js"></script>
+<![endif]-->
+    
+    <script>
+        aType = 'android',
+            aKey = '336064b965f062b3a78665b47560079d',
+            aVersion = '4.6.5',
+            authCode = '',
+            agKey = '3a1603171a51ff35aa40b6133702382e',
+            isMergeApp = '',
+            submiting = '请稍候...',
+            submitText = '立即进入',
+            isMobileRequest = false == true ? true : isiPad(),
+            isMobilePhone = false,
+            askBrowserAlert = '请在手机上使用浏览器打开本页面，或者扫描下面的二维码，即可安装',
+            forIosAlert = '您的手机是Android系统，无法安装iOS应用',
+            forAndroidAlert = '您的手机是iOS系统，无法安装Android应用',
+            isWechatRequest = false,
+            isQQRequest = false,
+            isUCRequest = false,
+            isWeiboRequest = false,
+            isAdDisplayed = false,
+            userAdDisplayed = true,
+            needInstallInOutBrowser = false,
+            remindOpenBrowserText = '',
+            browseType = 'other',
+            appInstallPasswordAlert = '请输入密码',
+            appStoreUrl = '',
+            reminderWechatDownloadContent = '请点击微信右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可安装',
+            reminderUCDownloadContent = '您当前使用的是 UC 浏览器，该浏览器不支持安装App。请在浏览器中打开，即可安装',
+            reminderWeiboDownloadContent = '请点击微博右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可安装',
+            reminderQQDownloadContent = '请点击QQ右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可安装',
+            downloadOnlyForCertification = 1,
+            userIsCertification = true,
+            isIOS = false,
+            unableDownload = '应用提供者未进行实名认证，无法安装',
+            reportFileDeleteBtn = '删除',
+            downloadPayMoney = '0',
+            deleteFileConfirm = '确定要删除文件',
+            appTemplate = 'colorful',
+            loginFirst = '请先登录',
+            appReportIsreason = '请输入举报原因',
+            appReportMinreason = '举报原因不能少于10个字符',
+            appReportMaxreason = '举报原因不能超过500个字符',
+            appReportIsemail = '请输入正确的邮箱地址',
+            appReportIsEmailOrMobile = '请输入正确的手机号/邮箱地址',
+            shortcutUrl = 'Cfq3',
+            mustDisplayAdSense = 0,
+            showAppAd = 1,
+            aKeyForAdSense = '336064b965f062b3a78665b47560079d',
+            appReportResult = '感谢您的举报，我们会尽快核实您的举报内容并处理。\n\n作为第三方内测分发平台，我们一直致力于打击违规应用，保护知识产权。非常感谢您的举报，我们会在第一时间安排专人处理您举报的问题，并在处理之后向您反馈处理结果。\n\n感谢您对我们的支持，如果有更多问题欢迎拨打我们的热线电话：4008660210',
+            appFeedbackResult = '反馈成功',
+            isAutoToAppStore = false,
+            iphoneXTips = '正在安装，请从屏幕底部边缘上滑返回桌面查看',
+            iosTips = '请按 Home 键在桌面查看',
+            androidTips = '下载时请勿离开页面（如未自动安装，请手动安装）',
+            testFlightTips = '请在 TestFlight 中查看',
+            isTestFlight = '',
+            isSignatureInhouse = false,
+            trustProvisionText = '信任开发者',
+            isInstallStart = true,
+            installIsNotStart = '安装未开始',
+            isInstallEnd = false,
+            installIsEnd = '安装已结束',
+            isInstallValided = true,
+            appFeedbackRequired = '请填写反馈信息',
+            appFeedbackEmailRequired = '请填写您的邮箱或手机号',
+            appFeedbackMaxLength = '反馈信息不能超过2000个字符',
+            isChrome = false,
+            channelId = 0;
+            isFinanceCates = false;
+            reportAppType = '1',
+            showMexAd = '',
+            mexAdUrl = 'https://mexad.pgyer.com/home.html?appname=极空BMS',
+            campaignFree = 0,
+            appGoAKey = '',
+            scheme = '',
+            installAppGoNow = '<strong>立即安装加速器</strong>',
+            isGDTSuccess = false,
+            percentage = 0,
+            appLang = '',
+            useNewTemplate = false,
+            useGoApp = false,
+            trafficPackage = false,
+            autoInstallSuccess = false, // 转向安装成功新页面
+            installToken = "5%2B7Fqv6ucLesdcxClGnHTl%2BbsVM%2FDmnyOS334TwgsKbxbKQkwXJKXFrcn6sY3UMv",
+            hasTurnTableAd = true,
+            addGtag = true, // 是否添加 google 统计
+            saleQRUrl = "",
+            // isShowAddToTeam = "false", // 同ip下是否可加入到组
+            followButtonText = '关注',
+            followedText = '您已关注',
+            wechatSubscribeText = '扫码或截屏识别关注',
+            wechatSubscribeSuccess = '关注成功',
+            wechatSubscribeError = '关注失败',
+            triggerFlag = true, // 是否触发点击获取口令, 测试为 true
+            isSafariRequest = true,
+            highSpeedProdyctType = '601',
+            wechatPay = '3',
+            btnBuyText = '',
+            payToken = '',
+            validateHighSpeedToken = false,
+            isHighSpeedDownload = 'false';
+            jobDomain = 'https://job.pgyer.com/',
+            httpDomain = 'https://www.pgyer.com',
+            percentage = 0;
+
+        // 非会员转盘广告安装
+        if (userAdDisplayed && hasTurnTableAd && isMobileRequest && aType == 'android') {
+            autoInstallSuccess = true;
+            // 5 分钟刷新一次安装的 Token
+            setTimeout(function() {
+                refreshToken()
+            }, 5000 * 60)
+        }
+
+        if (isTestFlight) {
+            isQQRequest = false;
+        }
+
+        var isUserLogged = false;
+        if ('') {
+            isUserLogged = true;
+        }
+
+        $(document).ready(function() {
+            validatePayToken();
+            App.init();
+
+            if (isAdDisplayed && isMobileRequest) {
+                setTimeout(function() {
+                    showJobAd();
+                }, 3000);
+            }
+            // 是否有视频, 是否转向内测组
+            
+            // setTimeout('showTurnTable()', 200);
+
+            //     if (isAdDisplayed) {
+            //         pushBannerAd();
+            //     }
+            // }
+            
+            
+            if (isFinanceCates == true) {
+                $('#appInstallConfirmModal').css('top', '10px');
+            }
+
+            var reportAppKey = '336064b965f062b3a78665b47560079d';
+            var reportAppName = "极空BMS";
+            $('.reportAppLink').attr('href', 'https://www.pgyer.com/report/app?type=' + reportAppType + '&key=' + reportAppKey + '&name=' + encodeURIComponent(reportAppName) + '&shortcut=' + window.location.pathname.slice(1));
+
+            if (true) {
+                if (isNeedCheckUC()) {
+                    if (false) {
+                        return false;
+                    } else if (checkIsUc()) {
+                                                isUCRequest = false;
+                        needInstallInOutBrowser = false;
+                        remindOpenBrowserText = '';
+                        reminderUCDownloadContent = '您当前使用的是 UC 浏览器，该浏览器不支持安装App。请在浏览器中打开，即可安装';
+
+                        var html = '<div class="row view-alert"  style="display:none;z-index:99;width:100%;background:#343434;margin-left:0;margin-right:0;padding-top:30px;padding-bottom:30px;box-shadow:inset 0px -10px 16px rgba(22, 22, 23, 0.62);"><div class="col-md-12 text-left" style="padding-right:30px;padding-left:30px;"><p style="color:#7f7e7e;margin:0px;"></p></div></div>';
+
+                        $(html).insertAfter("#wechatShareImg");
+
+                        setTimeout(function() {
+                            $('.view-alert').slideDown(1000);
+                        }, 200);
+                    }
+                }
+            }
+
+            $('#reportClick, #feedbackClick,#feedbackClickIcon').click(function() {
+                var modal = $(this).attr('data-modal');
+                ajaxLoadModal(modal);
+            });
+
+            $('#feedbackClickIcon').hover(
+                function() {
+                    var activeEle = $(this).find('img')
+                    var imgSrc = activeEle.attr('src')
+                    var normalSrc = imgSrc.replace('normal', 'active')
+                    activeEle.attr('src', normalSrc)
+                },
+                function() {
+                    if ($(this).hasClass('active')) return
+                    var activeEle = $(this).find('img')
+                    var imgSrc = activeEle.attr('src')
+                    var normalSrc = imgSrc.replace('active', 'normal')
+                    activeEle.attr('src', normalSrc)
+                }
+            );
+
+            $('#inhouseClick').click(function() {
+                $("#inhouseTip").modal('show');
+            });
+
+            $('#form').submit(function() {
+                if ($('#password').val() == '') {
+                    alert(appInstallPasswordAlert);
+                    return false;
+                }
+
+                saveData();
+                return false;
+            });
+
+            initView();
+
+            $('.history_show_more').click(function() {
+                loadOtherApps();
+            });
+
+            // 微信自动弹出
+            if (saleQRUrl && isWechatRequest) {
+                showSaleQRImg(500);
+            } else {
+                if (needInstallInOutBrowser) {
+                    setTimeout(function() {
+                        $('.view-alert').slideDown(1000);
+                    }, 500);
+                }
+            }
+
+            $("#lastest-li .close-tips").on('click', function() {
+                $("#lastest-li").removeClass('hide').addClass('hide');
+                // 使fashion模板背景变小
+                $("div.view-fashion-mobile-body .app-info-mobile.mobile-app-content").css('background-size', 'auto 330px');
+                $(".view-fashion-app-info + .row.detail").css('margin-top', '20px');
+                $("div.view-fashion-body").css('background-size', 'auto 170px');
+            });
+
+            $('#loginTelModal').on('shown.bs.modal',
+                function() {
+                    $("#getCode").unbind('click', bindFun).bind('click', bindFun);
+                });
+
+            if ($('#addFollow')) {
+                jQuery.validator.addMethod("isMobile", function(value, element) {
+                    var length = value.length;
+                    var mobile = /^1[3-9][0-9]{9}$/;
+                    return this.optional(element) || (length == 11 && mobile.test(value));
+                }, "请输入正确的手机号");
+
+                $("#addFollow").validate({
+                    rules: {
+                        tel: {
+                            required: true,
+                            isMobile: true
+                        },
+                        position: {
+                            required: true,
+                        }
+                    },
+                    messages: {
+                        tel: {
+                            required: '请输入您的手机号',
+                            isMobile: '请输入正确的手机号'
+                        },
+                        position: {
+                            required: '请选择您的职位',
+                        }
+                    },
+
+                    submitHandler: function() {
+                        addFollow()
+                    },
+
+                    errorPlacement: function(error, element) {
+                        error.insertAfter(element)
+                    }
+                })
+            }
+        });
+
+        function showTopAlert() {
+            setTimeout(function() {
+                $('.view-alert').slideDown(1000);
+            }, 500);
+        }
+
+        // wechat
+        wx.config({
+            debug: false,
+            appId: 'wx5c466490aaef0cc3',
+            timestamp: 1650962833,
+            nonceStr: '1a48c650958a89fbc928452042d8ec87',
+            signature: '0dd031c230e23cd3feb76e757c055fcbf67a782a',
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ']
+        });
+
+                wx.ready(function() {
+            wx.onMenuShareAppMessage({
+                title: "极空BMS",
+                desc: decodeURIComponent('%E7%89%88%E6%9C%AC%3A+4.6.5+%28build+45%29+%E5%A4%A7%E5%B0%8F%3A+48.9+MB+%E2%80%9C%E6%9E%81%E7%A9%BABMS%E2%80%9D%E6%98%AF%E6%88%90%E9%83%BD%E6%9E%81%E7%A9%BA%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%8E%A8%E5%87%BA%E7%9A%84%E6%99%BA%E8%83%BD%E7%94%B5%E6%B1%A0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%28BMS%29%E7%9A%84%E9%85%8D%E5%A5%97%E6%89%8B%E6%9C%BAAPP%EF%BC%8C%E6%9E%81%E7%A9%BA%E7%A7%91%E6%8A%80%E7%9A%84%E6%99%BA%E8%83%BD'.replace(/\+/g, '%20')),
+                link: 'https://www.pgyer.com/Cfq3',
+                imgUrl: 'https://cdn-app-icon.pgyer.com/a/0/9/1/9/a091977beb0f8297c298ac692cfad5e3?x-oss-process=image/resize,m_lfit,h_300,w_300/format,jpg'
+            });
+            wx.onMenuShareTimeline({
+                title: '极空BMS',
+                link: 'https://www.pgyer.com/Cfq3',
+                imgUrl: 'https://cdn-app-icon.pgyer.com/a/0/9/1/9/a091977beb0f8297c298ac692cfad5e3?x-oss-process=image/resize,m_lfit,h_300,w_300/format,jpg'
+            });
+            wx.onMenuShareQQ({
+                title: '极空BMS',
+                desc: decodeURIComponent('%E7%89%88%E6%9C%AC%3A+4.6.5+%28build+45%29+%E5%A4%A7%E5%B0%8F%3A+48.9+MB+%E2%80%9C%E6%9E%81%E7%A9%BABMS%E2%80%9D%E6%98%AF%E6%88%90%E9%83%BD%E6%9E%81%E7%A9%BA%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%8E%A8%E5%87%BA%E7%9A%84%E6%99%BA%E8%83%BD%E7%94%B5%E6%B1%A0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%28BMS%29%E7%9A%84%E9%85%8D%E5%A5%97%E6%89%8B%E6%9C%BAAPP%EF%BC%8C%E6%9E%81%E7%A9%BA%E7%A7%91%E6%8A%80%E7%9A%84%E6%99%BA%E8%83%BD'.replace(/\+/g, '%20')),
+                link: 'https://www.pgyer.com/Cfq3',
+                imgUrl: 'https://cdn-app-icon.pgyer.com/a/0/9/1/9/a091977beb0f8297c298ac692cfad5e3?x-oss-process=image/resize,m_lfit,h_300,w_300/format,jpg'
+            });
+        });
+    </script>
+    <!-- 暂时关闭 -->
+        <!-- end -->
+    <script src="https://assets.pgyer.com/static-20220521/assets/js/appEdit.js"></script>
+    <script src="https://assets.pgyer.com/static-20220521/assets/js/appScheme.js"></script>
+    <script src="https://assets.pgyer.com/static-20220521/assets/js/highSpeed.js"></script>
+
+    <script src="https://assets.pgyer.com/static-20220521/assets/js/adAdsense.js"></script>
+
+    <script>
+        // 处理页面数据太少，页面底部留白的问题, 手机显示不处理
+        $(function() {
+            var copyrightHeight = document.querySelector('.copyright').offsetHeight;
+            var offsetTop = $(window).height() - $(".copyright").offset().top
+            if (offsetTop - copyrightHeight > 0) {
+                if (!isMobileRequest) {
+                    $(".copyright").css({
+                        'position': 'fixed',
+                        'bottom': '0px',
+                        'width': '100%'
+                    });
+                }
+            }
+
+        });
+        $('.copyright').show();
+
+        var isFirstLoadComment = true
+        var isLoadAllCampinList = false
+        $(function() {
+            $('#descriptionLoad').click(function() {
+                $('#description').height('100%');
+                $(this).hide();
+                return false;
+            })
+
+            //评论modal打开
+            $('#commentModal').on('shown.bs.modal', function(e) {
+                $("#comment-textarea").focus()
+            })
+
+            // 点击评论star
+            $("#commentModal .comment-star i.fa-star").on('click', function() {
+                $(this).siblings().removeClass('active')
+                var currentIndex = $(this).index()
+                $("#appScore").val(currentIndex + 1)
+                $(this).addClass('active')
+                $(this).siblings().each(function(i, el) {
+                    if ($(el).index() <= currentIndex) {
+                        $(el).addClass('active')
+                    }
+                })
+            })
+
+
+            $("#commentForm").validate({
+                rules: {
+                    comment: {
+                        required: true,
+                        maxlength: 200,
+                    },
+                    score: {
+                        required: true,
+                    }
+                },
+                messages: {
+                    comment: {
+                        required: "请输入评论(限制200个字符)",
+                        maxlength: "评论过长",
+                    },
+                    score: {
+                        required: "请选择评分",
+                    }
+                },
+                submitHandler: function(form) {
+                    ajaxAddComment();
+                }
+            });
+
+            $("#appTabList ul.app-tabs a").removeClass('disabled')
+            // 切换tab加载数据
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+                var tabTarget = $(e.target).attr('href');
+                if (tabTarget == '#comment' && isFirstLoadComment) {
+                    ajaxGetComment()
+                    isFirstLoadComment = false
+                } else if (tabTarget === '#omnibus' && !isLoadAllCampinList) {
+                    // ajaxGetCampaignList("similar", true)
+                    // ajaxGetCampaignList("prefer", true)
+                }
+            })
+
+            // 绑定截图左右滚动
+            $(".scroll-icon").on('click', function() {
+                var scrollTable = $(this).siblings('.scroll-box');
+                if (!scrollTable) {
+                    return false;
+                }
+
+                var scrollID = scrollTable.attr('id');
+                if (!scrollID) {
+                    return false;
+                }
+
+                var scrollTableEl = scrollTable[0];
+                var imgWidth = scrollTable.find('img').first().width()
+                var scrollOffset = imgWidth
+                switch (scrollID) {
+                    case 'screenshotScroll':
+                        scrollOffset *= 2;
+                        break;
+
+                    case 'cateIconScroll':
+                    case 'preferListHorizon':
+                        scrollOffset *= 10;
+                        break;
+                }
+                var currentScrollLeft = scrollTableEl.scrollLeft
+                var isLeft = $(this).hasClass('scroll-left')
+                if (isLeft && currentScrollLeft > 0) {
+                    scrollTable.animate({
+                        scrollLeft: currentScrollLeft - scrollOffset
+                    }, 500);
+                } else if (!isLeft) {
+                    scrollTable.animate({
+                        scrollLeft: currentScrollLeft + scrollOffset
+                    }, 500);
+                    // scrollTableEl.scrollLeft += imgWidth
+                }
+            })
+
+            // 首先加载全量推荐, 新模板旧模板都加载推广广告
+            // if ($('body').hasClass('body-new-color')) {
+            // ajaxGetCampaignList("prefer")
+            //
+            if (userAdDisplayed) {
+                ajaxGetCampaignList("similar")
+            }
+            // }
+
+            //
+            var startx, starty;
+
+            //获得角度
+            function getAngle(angx, angy) {
+                return Math.atan2(angy, angx) * 180 / Math.PI;
+            };
+
+            //根据起点终点返回方向 1向上滑动 2向下滑动 3向左滑动 4向右滑动 0点击事件
+            // 最小滑动距离
+            var minSlideLen = 20,
+                SLIDE_LEFT = 1,
+                SLIDE_RIGHT = 2,
+                SLIDE_UP = 3,
+                SLIDE_DOWN = 4;
+
+            function getDirection(startx, starty, endx, endy) {
+                var angx = endx - startx;
+                var angy = endy - starty;
+                var result = 0;
+
+                //如果滑动距离太短
+                if (Math.abs(angx) < minSlideLen && Math.abs(angy) < minSlideLen) {
+                    return result;
+                }
+
+                var angle = getAngle(angx, angy);
+                if (angle >= -115 && angle <= -65) {
+                    result = SLIDE_UP;
+                } else if (angle > 65 && angle < 115) {
+                    result = SLIDE_DOWN;
+                } else if ((angle >= 170 && angle <= 180) || (angle >= -180 && angle < -170)) {
+                    result = SLIDE_LEFT;
+                } else if (angle >= -15 && angle <= 15) {
+                    result = SLIDE_RIGHT;
+                }
+                return result;
+            }
+
+            // var appTabListEle = $("#appTabList .tab-content")[0]
+            // var appTabListUlEle = $("#appTabList .nav-tabs")
+
+            // if (appTabListEle) {
+            //     //手指接触屏幕
+            //     appTabListEle.addEventListener("touchstart", function(e) {
+            //         startx = e.touches[0].pageX;
+            //         starty = e.touches[0].pageY;
+            //     }, false);
+
+            //     //手指离开屏幕
+            //     appTabListEle.addEventListener("touchend", function(e) {
+            //         var isScorllEle = $(e.target).closest('.horizon-scroll').length || $(e.target).closest('#screenshotScroll').length
+
+            //         if (isScorllEle) return
+            //         var endx, endy;
+            //         endx = e.changedTouches[0].pageX;
+            //         endy = e.changedTouches[0].pageY;
+            //         var direction = getDirection(startx, starty, endx, endy);
+            //         switch (direction) {
+            //             case 0:
+            //                 break;
+            //             case SLIDE_LEFT:
+            //             case SLIDE_RIGHT:
+            //                 slideTab(direction, appTabListUlEle)
+            //                 break;
+            //             default:
+            //                 break;
+            //         }
+            //     }, false);
+            // }
+
+            function slideTab(direction, tabEle) {
+                var index = $(tabEle).find("li.active").index()
+                var liLen = $(tabEle).find("li").length - 1
+                switch (direction) {
+                    case SLIDE_LEFT:
+                        if (index === liLen) return
+                        index++;
+                        break;
+                    case SLIDE_RIGHT:
+                        if (index === 0) return
+                        index--;
+                        break;
+                }
+                $(tabEle).find('li:eq(' + index + ') a').tab('show')
+            }
+
+            $('.scroll-box').siblings('.scroll-icon').addClass('hide')
+
+            $('#commentModalToggle').on('click', function() {
+                if (!userKey) {
+                    alert('您还没有登录，请登录后再试')
+                    window.location.href = 'https://www.pgyer.com/user/login/' + aKey;
+                } else {
+                    $("#commentModal").modal('show')
+                }
+            })
+        })
+
+
+
+        var getsComment = null;
+        var currentAjax;
+
+        // 初始化评论列表滚动
+        function initCommentListScroll() {
+            if (!isMobile()) {
+                return false;
+            }
+
+            var commentListEl = window.document.getElementById('commentList');
+            var scrollHeight = Math.floor(commentListEl.scrollHeight)
+            commentListEl.onscroll = pgyAppEdit.debounce(function(e) {
+
+                if (getsComment === false) {
+                    return false;
+                }
+
+                if (Math.floor(commentListEl.scrollTop) + Math.floor(commentListEl.offsetHeight) == scrollHeight) {
+                    ajaxGetComment()
+                }
+            }, 200)
+        }
+
+        window.onresize = pgyAppEdit.debounce(function(e) {
+            initDisplayScrollIcon()
+        }, 200)
+
+        function initDisplayScrollIcon() {
+            $(".scroll-box").each(function(index, element) {
+                var ele = $(element)[0];
+                var scrollWidth = ele.scrollWidth;
+                var offsetWidth = ele.offsetWidth;
+                if (scrollWidth > offsetWidth) {
+                    $(element).siblings('.scroll-icon').removeClass('hide')
+                } else {
+                    $(element).siblings('.scroll-icon').addClass('hide')
+                }
+            });
+        }
+
+        function checkIsUc() {
+            var browser = navigator.userAgent;
+
+            // 是否为safari
+            if (/Safari/.test(browser) && !isChrome) {
+
+                var ua = browser.toLowerCase();
+                var m = ua.match(/cpu iphone os (.*?) like mac os/);
+                var ver;
+
+                if (!m) {
+                    return false;
+                } else {
+                    ver = m[1].replace(/_/g, ".");
+                }
+
+                var osVer = ver.split('.')[0] + '.' + ver.split('.')[1]
+
+                // 是否有apple
+                if (typeof window.ApplePaySession === 'function') {
+                    return false;
+                } else if (osVer && osVer <= 11.2) {
+                    return false;
+                } else {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        if (!isAdDisplayed) {
+            if (isMobileRequest) {
+                gtag('event', 'app_page_vip', {
+                    'app_page_vip': 1
+                });
+            } else {
+                gtag('event', 'app_page_pc', {
+                    'app_page_pc': 1
+                });
+            }
+        }
+
+        gtag('event', 'app_page_load', {
+            'is_app_page': 1
+        });
+
+        if (aType == 'ios') {
+            gtag('event', 'app_view_ios', {
+                'app_view_ios': 1
+            });
+        } else {
+            gtag('event', 'app_view_android', {
+                'app_view_android': 1
+            });
+        }
+
+        
+        function setHistory() {
+            pushHistory();
+            //监听浏览器后退事件
+            window.addEventListener("popstate",
+                function(e) {
+                    location.href = "https://www.pgyer.com/ad/historyBackAd?uId=2354697";
+                }, false);
+        }
+
+        //浏览器历史记录
+        function pushHistory() {
+            var url = "#";
+            var state = {
+                title: "title",
+                url: "/ad/historyBackAd?uId=2354697"
+            };
+
+            window.history.pushState(state, "title", "#");
+        }
+    </script>
+    <script type="text/javascript">(function (w) {w.frontjsConfig={token:"c68f352d79ca00ed4b38afe12d899f6a",behaviour:"15",trustVendor:true,ignoreVendor:true,routeMapping:[["/\\/(manager|doc|tools)\\/(.*)\\/(.*)$/","$1.$2.$3"],["/\\/(about|manager|app|doc|tools|account|app|publish|user|price)\\/(.*)$/","$1.$2"],["/\\/(sdk|doc|about|tools|account|app|publish|price)$/","$1"],["/pgyer\\.com$/","home"],["/\\/[a-zA-Z0-9]{4,30}$/","appdownload"],["/\\/[a-f0-9]{32}$/","appdownload"]],origin:["qnssl.com","qiniup.com","frontjs.com","pgyer.com"],FPSThreshold:15};w.frontjsTmpData = {r:[],e:[],l:[]};w.frontjsTmpCollector = function (ev) {(ev.message ? window.frontjsTmpData.e : window.frontjsTmpData.r).push([new Date().getTime(), ev])};w.FrontJS = {addEventListener: function (t, f) {w.frontjsTmpData.l.push([t, f]);return f;},removeEventListener: function (t, f) {for (var i = 0; i < w.frontjsTmpData.l.length; i++) {t === w.frontjsTmpData.l[i][0] && f === w.frontjsTmpData.l[i][1] && w.frontjsTmpData.l.splice(i, 1);}return f;}};w.document.addEventListener("error", w.frontjsTmpCollector, true);w.addEventListener("error", w.frontjsTmpCollector, true);w.addEventListener("load", function () {var n = w.document.createElement("script");n.src = "https://frontjs-static.pgyer.com/dist/current/frontjs.web.min.js"; w.document.body.appendChild(n);}, true);})(window);</script>
+    <script>
+var telErrorTips = '请正确填写您的手机号码';
+var codeRegain = '重新获取';
+var second = '秒';
+var telHolder = '请输入手机号码';
+var emailHolder = '请输入邮箱地址';
+var pwdHolder = '请输入密码';
+var telIncorrectTips = '输入的手机号码与绑定手机号不相符';
+var emailErrorTips = '请正确填写您的邮箱';
+var CNCALLINGCODE = '86';
+var mobileRegCN = /^1[3-9][0-9]{9}$/;
+var mobileRegEN = /[\d\-\s]+/;
+const TENCENT_CAPTCHA_ERROR_CODE = [100];
+</script>
+    <script>
+const TENCENT_CAPTCHA_APP_ID = '2097264343';
+const CONTROLLER = 'user';
+const openCaptcha = 1; 
+</script>
+<script type="text/javascript" src="https://assets.pgyer.com/static-20220521/assets/js/tencentVerify.js"></script>
+<script type="text/javascript" src="https://assets.pgyer.com/static-20220521/assets/js/getCode.js"></script>
+<script type="text/javascript" src="https://assets.pgyer.com/static-20220521/assets/plugins/intl-tel-input/js/intlTelInput.js"></script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <!-- footer -->    <script>
+        var latestPublishAKey = '';
+    </script>
+    <script type="text/javascript" src="https://assets.pgyer.com/static-20220521/assets/js/appRecommendService.js"></script>
+</body>
+
+</html>
